@@ -11,4 +11,12 @@ module decoder_tb;
   );
 
   // Complete your testbench here
+  initial begin
+    // Test all possible binary inputs
+    for (int i = 0; i < 16; i++) begin
+        binary = i;
+        #10; // Wait for 10 time units
+    end
+    $finish;
+  end
 endmodule
